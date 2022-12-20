@@ -1,7 +1,7 @@
 const book = document.getElementById("book");
 const fontSizes = document.getElementsByClassName("font-size");
-const textColors = document.querySelector(".book__control_color").getElementsByClassName("color");
-const backgroundColors = document.querySelector(".book__control_background").getElementsByClassName("color");
+const textColors = document.querySelector(".book__control_color").querySelectorAll(".color");
+const backgroundColors = document.querySelector(".book__control_background").querySelectorAll(".color");
 
 for (const fontSize of fontSizes) {
    fontSize.addEventListener("click", function() {
