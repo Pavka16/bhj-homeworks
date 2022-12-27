@@ -41,7 +41,9 @@ chatRed.addEventListener("click", () => {
 });
 
 inputMessage.addEventListener("keydown", function(e) {
-   if (e.code !== "Enter" && this.value.length === 0) {
+   if (e.code !== "Enter") {
+      return;
+   } else if (this.value.length === 0) {
       return;
    } else {
       chatMessages.innerHTML += `
