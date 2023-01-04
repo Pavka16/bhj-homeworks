@@ -7,6 +7,10 @@ body {
   align-items: center;
 }
 
+.products {
+   display: flex;
+   flex-wrap: wrap;
+}
 .cart__product {
   position: relative;
 }
@@ -88,4 +92,17 @@ body {
 
 .product-shadow {
   position: absolute;
+}
+
+.product__delete {
+   background: green;
+   padding: 10px 20px;
+   color: #fff;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+
+.product__delete:hover {
+   opacity: 0.8;
 }
