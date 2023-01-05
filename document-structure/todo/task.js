@@ -9,7 +9,7 @@ const closeTask = (e, task) => {
 
 taskAdd.addEventListener("click", function(e) {
    e.preventDefault();
-   if (!taskInput.value)
+   if (!taskInput.value.trim())
       return;
    
    const task = document.createElement("div");
