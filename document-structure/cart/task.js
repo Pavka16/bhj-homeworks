@@ -56,12 +56,4 @@ class Product {
 
 for (const elem of document.getElementsByClassName("product")) {
    const product = new Product(elem);
-
-   for (const cartProduct of cartProducts.querySelectorAll(".cart__product")) {
-      if (product.id === cartProduct.dataset.id) {
-         product.cartProduct = cartProduct;
-         product.count = +cartProduct.querySelector(".cart__product-count").innerText;
-         break;
-      }
-   }
 }
