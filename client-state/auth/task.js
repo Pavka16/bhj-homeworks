@@ -31,7 +31,7 @@ signinForm.addEventListener("submit", e => {
          userId.innerText = localStorage.userId;
          showSignout();
       } else {
-         clearInput();
+         signinForm.reset();
          showModal();
       }
    }
@@ -40,6 +40,7 @@ signinForm.addEventListener("submit", e => {
 
 
 function showModal() {
+
    let div = document.createElement('div');
    div.className = 'modal'
    div.style.cssText = `
@@ -64,7 +65,6 @@ function showModal() {
       </div>
       </div>
       `
-
    signin.prepend(div);
 }
 
@@ -84,13 +84,6 @@ function exitSingin() {
    localStorage.clear();
    welcome.classList.remove('welcome_active');
    signin.classList.add('signin_active');
-   clearInput();
+   signinForm.reset();
    signout.remove();
-}
-
-function clearInput() {
-   for (let input of signinForm.querySelectorAll("input")) {
-      input.value = '';
-   }
-
 }
